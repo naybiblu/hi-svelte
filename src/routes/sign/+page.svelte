@@ -9,6 +9,13 @@
 	const toggleMode = () => logIn = logIn ? false : true;
 </script>
 
+<style>
+	input:-webkit-autofill {
+		-webkit-box-shadow: 0 0 0 5.75rem #39393f inset !important;
+		-webkit-text-fill-color: white !important;
+	}
+</style>
+
 <svelte:head>
 	<title>Hi-Svelte | Sign In</title>
 	<link rel="icon" href="img/logo.svg" />
@@ -31,7 +38,13 @@
 	<div class="bg-gradient-to-t from-[#1c1c1c] h-full w-full z-20 fixed"></div>
 	<div class="flex flex-col h-full w-max gap-8 text-white z-30 pl-20 justify-center">
 		<div class="flex flex-col gap-5">
-			<p class="opacity-60 tracking-[0.5rem]">HI-SVELTE</p>
+			<p class="opacity-60 tracking-[0.5rem] flex flex-row gap-3 items-center">
+				<a href="/">
+					<img src="img/arrow.svg" alt="back" class="rotate-90 h-5 invert opacity-60
+						hover:opacity-100">	
+				</a>
+				HI-SVELTE
+			</p>
 			<h1 class="font-[1000] text-6xl flex flex-row gap-5">
 				<span class="text-amber-700">{"<"}</span>
 				Sign

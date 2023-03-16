@@ -27,6 +27,7 @@
 		"discord.js": "^14.8.0",
 		"humanize-duration": "^3.28.0",
 		"mongodb": "^5.1.0",
+		"svelte-quill": "^1.2.0",
 		"uuid": "^9.0.0"
 	}
 }

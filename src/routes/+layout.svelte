@@ -5,10 +5,15 @@
     import { page } from '$app/stores';
 </script>
 
-<div class="relative h-full w-full 
-    {$page.url.pathname !== "/signin" ? "overflow-x-hidden" : "overflow-hidden"}">
-    {#if $page.url.pathname !== "/signin"}
+<div class="flex flex-col h-screen">
+    {#if $page.url.pathname !== "/sign"}
         <TopNav/>
+        <div class="flex mt-[4.6rem] h-full z-0 overflow-x-hidden overflow-y-auto">
+            <slot/>
+        </div>
+    {:else}
+        <div class="h-full z-0 overflow-hidden">
+            <slot/>
+        </div>
     {/if}
-    <slot />
 </div>
