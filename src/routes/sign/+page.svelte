@@ -17,7 +17,7 @@
 </style>
 
 <svelte:head>
-	<title>Hi-Svelte | Sign In</title>
+	<title>Sign {logIn ? "in" : "up"} | Hi-Svelte</title>
 	<link rel="icon" href="img/logo.svg" />
 </svelte:head>
 

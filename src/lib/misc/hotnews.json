@@ -1,0 +1,32 @@
+{
+    "1": {
+        "head": "Learn Svelte Basics",
+        "author": "Svelte",
+        "img": "https://madewithnetworkfra.fra1.digitaloceanspaces.com/spatie-space-production/28498/svelte-cubed.jpg",
+        "link": "https://svelte.dev/tutorial/basics"
+    },
+    "2": {
+        "head": "Docs for Svelte",
+        "author": "Svelte",
+        "img": "https://madewithnetworkfra.fra1.digitaloceanspaces.com/spatie-space-production/13035/svelte-docs.jpg",
+        "link": "https://svelte.dev/docs"
+    },
+    "3": {
+        "head": "Docs for Sveltekit",
+        "author": "Svelte",
+        "img": "https://blog.logrocket.com/wp-content/uploads/2021/05/Exploring-Newest-Svelte-Based-Framework-SvelteKit.png",
+        "link": "https://kit.svelte.dev/docs/introduction"
+    },
+    "4": {
+        "head": "Docs for Sveltekit",
+        "author": "Svelte",
+        "img": "https://blog.logrocket.com/wp-content/uploads/2021/05/Exploring-Newest-Svelte-Based-Framework-SvelteKit.png",
+        "link": "https://kit.svelte.dev/docs/introduction"
+    },
+    "5": {
+        "head": "Docs for Sveltekit",
+        "author": "Svelte",
+        "img": "https://blog.logrocket.com/wp-content/uploads/2021/05/Exploring-Newest-Svelte-Based-Framework-SvelteKit.png",
+        "link": "https://kit.svelte.dev/docs/introduction"
+    }
+}

@@ -9,11 +9,12 @@
     };
 
     let title: string;
+    let tags: string;
     let content: string;
 </script>
 
 <svelte:head>
-	<title>Hi-Svelte | Ask</title>
+	<title>Ask | Hi-Svelte</title>
 	<link rel="icon" href="img/logo.svg" />
     <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </svelte:head>
@@ -38,7 +39,14 @@
             <p class="absolute top-3 left-5 text-xs opacity-50 font-extrabold">TITLE</p>
         </div>
         <hr class="opacity-30">
-        <div class="relative text-black h-full">
+        <div class="relative flex flex-col text-black">
+            <input type="text" placeholder="sveltekit, form validation, dragons"
+                class="h-10 w-full bg-white rounded-lg px-5 pt-10 pb-5 text-xs 
+                opacity-80 placeholder:italic outline-none" bind:value={tags}>
+            <p class="absolute top-3 left-5 text-xs opacity-50 font-extrabold">TAGS</p>
+        </div>
+        <hr class="opacity-30">
+        <div class="relative text-black h-full pb-5">
             <div class="relative h-full">
                 <div id="toolbar" class="rounded-t-lg z-50 bg-transparent opacity-80
                 text-black absolute w-full border-b-black">
@@ -80,6 +88,7 @@
         </div>
         <form>
             <input type="hidden" value={title}>
+            <input type="hidden" value={tags}>
             <input type="hidden" value={content}>
             <button class="bg-amber-700 h-16 w-16 px-2 rounded-full font-bold z-50
                hover:bg-[#39393f] fixed bottom-12 right-12 flex items-center justify-center">

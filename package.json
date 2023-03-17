@@ -25,6 +25,7 @@
 	"type": "module",
 	"dependencies": {
 		"discord.js": "^14.8.0",
+		"fs": "^0.0.1-security",
 		"humanize-duration": "^3.28.0",
 		"mongodb": "^5.1.0",
 		"svelte-quill": "^1.2.0",
