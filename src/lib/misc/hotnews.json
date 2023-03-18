@@ -1,4 +1,10 @@
 {
+    "0": {
+        "head": "The Svelte Playground",
+        "author": "Svelte",
+        "img": "https://www.alsacreations.com/xmedia/doc/original/1644416277-svelte.jpg",
+        "link": "https://svelte.dev/repl/"
+    },
     "1": {
         "head": "Learn Svelte Basics",
         "author": "Svelte",
@@ -6,27 +12,27 @@
         "link": "https://svelte.dev/tutorial/basics"
     },
     "2": {
-        "head": "Docs for Svelte",
+        "head": "Make One-paged Sites",
         "author": "Svelte",
-        "img": "https://madewithnetworkfra.fra1.digitaloceanspaces.com/spatie-space-production/13035/svelte-docs.jpg",
+        "img": "https://joshcollinsworth.com/images/post_images/introducing_svelte.png",
         "link": "https://svelte.dev/docs"
     },
     "3": {
-        "head": "Docs for Sveltekit",
-        "author": "Svelte",
-        "img": "https://blog.logrocket.com/wp-content/uploads/2021/05/Exploring-Newest-Svelte-Based-Framework-SvelteKit.png",
+        "head": "Create Routed Sites",
+        "author": "Sveltekit",
+        "img": "https://res.cloudinary.com/practicaldev/image/fetch/s--JqiGMO_w--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/p3nn57r52krvpdieblta.png",
         "link": "https://kit.svelte.dev/docs/introduction"
     },
     "4": {
-        "head": "Docs for Sveltekit",
-        "author": "Svelte",
-        "img": "https://blog.logrocket.com/wp-content/uploads/2021/05/Exploring-Newest-Svelte-Based-Framework-SvelteKit.png",
+        "head": "Explore the 3D Svelte",
+        "author": "Threlte",
+        "img": "https://threlte.xyz/threlte_og.jpg",
         "link": "https://kit.svelte.dev/docs/introduction"
     },
     "5": {
-        "head": "Docs for Sveltekit",
-        "author": "Svelte",
-        "img": "https://blog.logrocket.com/wp-content/uploads/2021/05/Exploring-Newest-Svelte-Based-Framework-SvelteKit.png",
-        "link": "https://kit.svelte.dev/docs/introduction"
+        "head": "Websites, Now Minified",
+        "author": "Svelte Native",
+        "img": "https://madewithnetworkfra.fra1.digitaloceanspaces.com/spatie-space-production/23810/svelte-native-3.jpg",
+        "link": "https://svelte-native.technology/tutorial"
     }
 }

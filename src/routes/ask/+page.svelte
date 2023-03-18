@@ -8,9 +8,38 @@
         placeholder: "There is a specific concern I am about regarding my pet dragon. It is quite..."
     };
 
+    let tagsArr: string[] = [];
+    let onTags: string;
+
     let title: string;
     let tags: string;
     let content: string;
+
+    const addTag = (e: any) => {
+        onTags = e.target.value;
+        if (tagsArr.length === 5) e.target.value = "";
+        if (e.target.value.includes(" ") && /[^ ]/g.test(e.target.value)) {
+            const word = e.target.value.replace(" ", "").toLowerCase();
+            let container = document.querySelector("#containerTag");
+            tagsArr = [...tagsArr, word];
+            onTags = "";
+            e.target.value = "";
+        }
+    };
+    const removeTag = (e: any) => {
+        let container = document.querySelector("#containerTag");
+        if (e.keyCode === 8 && !onTags && tagsArr.length !== 0
+            || e.keyCode === 8 && tagsArr.length === 5) {
+            let input: HTMLInputElement | null = document.querySelector("#textTag");
+            input!.value = tagsArr[tagsArr.length - 1];
+            tagsArr = tagsArr.filter((tag: string, i: number) => i !== tagsArr.length -1);
+        }
+    }
+    const click2Remove = (e: any) => tagsArr = tagsArr.filter((tag: string) => tag !== e.target.parentNode.parentNode.childNodes[0].data);
+    const focus2Tag = (e: any) => {
+        let input: HTMLInputElement | null = document.querySelector("#textTag");
+        input!.focus();
+    }
 </script>
 
 <svelte:head>
@@ -18,6 +47,8 @@
 	<link rel="icon" href="img/logo.svg" />
     <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </svelte:head>
+
+<svelte:window on:keydown={removeTag}></svelte:window>
 
 <section class="h-full w-full flex justify-center py-5">    
     <div class="h-80 w-5/6 gap-3 flex flex-col">
@@ -39,11 +70,27 @@
             <p class="absolute top-3 left-5 text-xs opacity-50 font-extrabold">TITLE</p>
         </div>
         <hr class="opacity-30">
-        <div class="relative flex flex-col text-black">
-            <input type="text" placeholder="sveltekit, form validation, dragons"
-                class="h-10 w-full bg-white rounded-lg px-5 pt-10 pb-5 text-xs 
-                opacity-80 placeholder:italic outline-none" bind:value={tags}>
-            <p class="absolute top-3 left-5 text-xs opacity-50 font-extrabold">TAGS</p>
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <div class="relative flex flex-col w-full bg-white/80 rounded-lg text-black
+            h-[3.9rem] py-3 px-5" on:click={focus2Tag}>
+            <p class="text-xs opacity-50 font-extrabold">TAGS</p>
+            <div class="h-8 w-full flex flex-row gap-2 items-center cursor-text">
+                <div class="flex-row flex-wrap z-40 gap-2
+                    {tagsArr.length === 0 ? "hidden" : "flex"}" id="containerTag">
+                    {#each tagsArr as tag, i}
+                        <div class="px-2 py-1 bg-amber-700 text-white rounded-lg font-bold
+                        text-xs flex flex-row gap-1 items-center justify-center">
+                            {tag}
+                            <button on:click={click2Remove} id="tag{i}">
+                                <img src="img/wrong.svg" class="h-3 invert opacity-60" alt={tag}>
+                            </button>
+                        </div>
+                    {/each}
+                </div>
+                <input type="text" placeholder="sveltekit, form validation, dragons"
+                    class="h-full w-60 text-xs bg-transparent placeholder:italic outline-none" 
+                    on:input={addTag} id="textTag">
+            </div>
         </div>
         <hr class="opacity-30">
         <div class="relative text-black h-full pb-5">
